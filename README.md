@@ -5,25 +5,37 @@ O projeto "Storify" é uma plataforma de publicação de conteúdo que se inspir
 
 ## Requisitos
 
-- [Node](https://nodejs.org/) (18.13.0) ou superior
-- [Yarn](https://yarnpkg.com/) (1.22.19) ou superior
-- [Docker](https://www.docker.com/) (24.0.4) ou superior
+- [Node](https://nodejs.org/) (18.13.0) ou superior.
+- [Yarn](https://yarnpkg.com/) (1.22.19) ou superior.
+- [Docker](https://www.docker.com/) (24.0.4) ou superior.
 
 ## Rodando o sistema
 
-Primeiro precisamos criar o banco de dados com o docker, então execute dentro do diretorio do projeto rode:
+Primeiro precisamos criar o banco de dados com o docker, então execute dentro do diretório do projeto:
 
-``docker build -t storify .``
+```bash
+docker build -t storify .
+```
 
-``docker run -d -p 3306:3306 storify``
+```bash
+docker run -d -p 3306:3306 storify
+```
 
-Vamos agora rodar as migrations com:
+Agora vamos rodar as migrations e em seguida popular o banco:
 
-``yarn migrate``
+```bash
+yarn migrate
+```
+
+```bash
+yarn seed
+```
 
 Por fim só falta iniciar o projeto Nextjs:
 
-``yarn dev``
+```bash
+yarn dev
+```
 
-Pronto tudo deve estar funcionando em ``http://localhost:3000`` e o banco deve estar localizado em ``172.17.0.2:3306`` 😎
+Pronto tudo deve estar funcionando em [http://localhost:3000](http://localhost:3000) 😎
 
