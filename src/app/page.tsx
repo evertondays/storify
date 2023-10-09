@@ -1,7 +1,7 @@
 import { PrismaClient } from '@prisma/client'
-import styles from './page.module.css'
-import Image from 'next/image'
 import Link from 'next/link'
+import styles from './page.module.css'
+import HomeCard from '../components/home-card.component'
 
 export default async function Home() {
 	const prisma = new PrismaClient()
@@ -23,13 +23,11 @@ export default async function Home() {
 				</div>
 			</header>
 
-			<ul>
+			<div className={styles.card_container}>
 				{
-					articles.map(post => (
-						<li key={post.id}>{post.title}</li>
-					))
+					articles.map(post => ( <HomeCard post={post} key={post.id} /> ))
 				}
-			</ul>
+			</div>
 		</div>
 	)
 }

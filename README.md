@@ -18,7 +18,7 @@ docker build -t storify .
 ```
 
 ```bash
-docker run -d -p 3306:3306 storify
+docker run -d -p 5432:5432 storify
 ```
 
 Agora vamos rodar as migrations e em seguida popular o banco:
