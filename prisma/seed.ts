@@ -1,16 +1,16 @@
 // prisma/seed.ts
 
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient } from '@prisma/client'
 
-const prisma = new PrismaClient();
+const prisma = new PrismaClient()
 
 async function main() {
-  await prisma.article.upsert({
-    where: { title: '' },
-    update: {},
-    create: {
-		title: "A evolução da música: desde os primórdios até os dias atuais",
-		body: `
+	await prisma.article.upsert({
+		where: { title: '' },
+		update: {},
+		create: {
+			title: 'A evolução da música: desde os primórdios até os dias atuais',
+			body: `
 		Título: A evolução da música: desde os primórdios até os dias atuais
 		
 		Introdução
@@ -65,19 +65,20 @@ async function main() {
 		Futuro da música
 		
 		É difícil prever o futuro da música, mas é certo que ela continuará a evoluir. As novas tecnologias, como a inteligência artificial e a realidade virtual, provavelmente terão um impacto significativo na música.`,
-		description:
-		  'Ele discute as principais mudanças na forma e no conteúdo da música, bem como os principais estilos musicais que surgiram ao longo do tempo.',
-		published: true,
-		imageUrl: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
-	},
-  });
+			description:
+				'Ele discute as principais mudanças na forma e no conteúdo da música, bem como os principais estilos musicais que surgiram ao longo do tempo.',
+			published: true,
+			imageUrl:
+				'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+		},
+	})
 
-  await prisma.article.upsert({
-	where: { title: '' },
-	update: {},
-	create: {
-		title: "QR Code: o que é, como funciona e como criar",
-		body: `Introdução
+	await prisma.article.upsert({
+		where: { title: '' },
+		update: {},
+		create: {
+			title: 'QR Code: o que é, como funciona e como criar',
+			body: `Introdução
 	
 		O QR Code, ou Quick Response Code, é um código de barras bidimensional que pode ser usado para armazenar uma grande quantidade de dados. Ele é composto por um conjunto de módulos pretos e brancos dispostos em uma matriz, que pode ser lida por um smartphone ou outro dispositivo com câmera.
 		
@@ -104,19 +105,20 @@ async function main() {
 		Conclusão
 		
 		Os QR Codes são uma ferramenta versátil que pode ser usada para uma variedade de propósitos. Eles são fáceis de criar e usar, e podem ser lidos por uma variedade de dispositivos.`,
-		description:
-		  'Em poucas palavras, QR Codes são códigos de barras bidimensionais que podem ser usados para armazenar uma grande quantidade de dados podendo ser usados guardar informações de contato, linkar para sites, realizar pagamentos sem contato e muito mais.',
-		published: true,
-		imageUrl: 'https://images.unsplash.com/photo-1595079676601-f1adf5be5dee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
-	 },
- });
+			description:
+				'Em poucas palavras, QR Codes são códigos de barras bidimensionais que podem ser usados para armazenar uma grande quantidade de dados podendo ser usados guardar informações de contato, linkar para sites, realizar pagamentos sem contato e muito mais.',
+			published: true,
+			imageUrl:
+				'https://images.unsplash.com/photo-1595079676601-f1adf5be5dee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+		},
+	})
 
- await prisma.article.upsert({
-	where: { title: '' },
-	update: {},
-	create: {
-		title: "As novas descobertas sobre o universo",
-		body: `O universo é um lugar vasto e misterioso, e os cientistas estão constantemente aprendendo mais sobre ele. Nos últimos anos, houve uma série de descobertas importantes que estão desafiando nossa compreensão do cosmos.
+	await prisma.article.upsert({
+		where: { title: '' },
+		update: {},
+		create: {
+			title: 'As novas descobertas sobre o universo',
+			body: `O universo é um lugar vasto e misterioso, e os cientistas estão constantemente aprendendo mais sobre ele. Nos últimos anos, houve uma série de descobertas importantes que estão desafiando nossa compreensão do cosmos.
 	
 		Uma das descobertas mais significativas foi a do Telescópio Espacial James Webb. Lançado em 2021, o Webb é o telescópio mais poderoso já construído, e ele está nos permitindo ver o universo de uma forma nunca antes possível.
 		
@@ -137,19 +139,20 @@ async function main() {
 		Essas descobertas também estão nos ajudando a desenvolver novas tecnologias. Por exemplo, o Webb está sendo usado para desenvolver novos medicamentos e tratamentos médicos.
 		
 		As novas descobertas sobre o universo estão nos levando a uma era de descobertas e inovação. Elas estão nos ajudando a entender melhor o nosso lugar no cosmos, e elas estão nos preparando para o futuro.`,
-		description:
-		  'Descobertas recentes desafiam nossa compreensão do cosmos, revelando um universo vasto e misterioso, elas estão nos ajudando a entender melhor o nosso lugar no cosmos, e elas estão nos preparando para o futuro.',
-		published: true,
-		imageUrl: 'https://images.unsplash.com/photo-1502134249126-9f3755a50d78?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
-	 },
- });
+			description:
+				'Descobertas recentes desafiam nossa compreensão do cosmos, revelando um universo vasto e misterioso, elas estão nos ajudando a entender melhor o nosso lugar no cosmos, e elas estão nos preparando para o futuro.',
+			published: true,
+			imageUrl:
+				'https://images.unsplash.com/photo-1502134249126-9f3755a50d78?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+		},
+	})
 
- await prisma.article.upsert({
-	where: { title: '' },
-	update: {},
-	create: {
-		title: "A segurança cibernética: o que é e por que é importante",
-		body: `Em um mundo cada vez mais digital, a segurança cibernética é uma questão essencial para indivíduos, empresas e governos. Com o aumento da conectividade e da dependência de tecnologias digitais, os ataques cibernéticos estão se tornando cada vez mais comuns e sofisticados.
+	await prisma.article.upsert({
+		where: { title: '' },
+		update: {},
+		create: {
+			title: 'A segurança cibernética: o que é e por que é importante',
+			body: `Em um mundo cada vez mais digital, a segurança cibernética é uma questão essencial para indivíduos, empresas e governos. Com o aumento da conectividade e da dependência de tecnologias digitais, os ataques cibernéticos estão se tornando cada vez mais comuns e sofisticados.
 	
 		O que é segurança cibernética?
 		
@@ -172,19 +175,20 @@ async function main() {
 		Ser cauteloso ao clicar em links e abrir anexos: Os links e anexos maliciosos podem conter malware que pode infectar seu sistema.
 		Educar-se sobre segurança cibernética: É importante estar ciente das últimas ameaças cibernéticas e das melhores práticas de segurança.
 		A segurança cibernética é um esforço contínuo. À medida que as ameaças cibernéticas evoluem, é importante estar ciente das últimas tendências e tomar medidas para proteger seus ativos digitais.`,
-		description:
-		  'A segurança cibernética é a proteção de sistemas, redes e dados contra acessos não autorizados, uso indevido, divulgação, alteração ou destruição. Ela é importante para indivíduos, empresas e governos, pois protege a privacidade, a propriedade intelectual e a infraestrutura crítica.',
-		published: true,
-		imageUrl: 'https://images.unsplash.com/photo-1602529710584-458a995c8785?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
-	 },
- });
+			description:
+				'A segurança cibernética é a proteção de sistemas, redes e dados contra acessos não autorizados, uso indevido, divulgação, alteração ou destruição. Ela é importante para indivíduos, empresas e governos, pois protege a privacidade, a propriedade intelectual e a infraestrutura crítica.',
+			published: true,
+			imageUrl:
+				'https://images.unsplash.com/photo-1602529710584-458a995c8785?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+		},
+	})
 
- await prisma.article.upsert({
-	where: { title: '' },
-	update: {},
-	create: {
-		title: "O futuro da educação: mais personalizado, mais acessível e mais centrado no aluno",
-		body: `A educação está em constante evolução, e o futuro promete ser ainda mais transformador. As tecnologias emergentes, como a inteligência artificial, a realidade virtual e a realidade aumentada, estão redefinindo a forma como aprendemos.
+	await prisma.article.upsert({
+		where: { title: '' },
+		update: {},
+		create: {
+			title: 'O futuro da educação: mais personalizado, mais acessível e mais centrado no aluno',
+			body: `A educação está em constante evolução, e o futuro promete ser ainda mais transformador. As tecnologias emergentes, como a inteligência artificial, a realidade virtual e a realidade aumentada, estão redefinindo a forma como aprendemos.
 	
 		Mais personalizado
 		
@@ -213,19 +217,20 @@ async function main() {
 		Desenvolver habilidades de pensamento crítico e resolução de problemas: Essas habilidades são essenciais para o sucesso no mundo moderno. Os alunos podem desenvolver essas habilidades participando de atividades de aprendizagem baseada em projetos e aprendizagem experiencial.
 		Ser proficiente em tecnologia: A tecnologia é uma ferramenta poderosa que pode ser usada para aprender. Os alunos devem estar familiarizados com uma variedade de tecnologias educacionais.
 		O futuro da educação é brilhante. Com as tecnologias emergentes e as novas abordagens pedagógicas, os alunos têm a oportunidade de aprender de uma forma mais personalizada, acessível e centrada no aluno.`,
-		description:
-		  'A educação do futuro será mais personalizada, acessível e centrada no aluno. As tecnologias emergentes, como a inteligência artificial, a realidade virtual e a realidade aumentada, estão redefinindo a forma como aprendemos.',
-		published: true,
-		imageUrl: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2022&q=80'
-	 },
- });
+			description:
+				'A educação do futuro será mais personalizada, acessível e centrada no aluno. As tecnologias emergentes, como a inteligência artificial, a realidade virtual e a realidade aumentada, estão redefinindo a forma como aprendemos.',
+			published: true,
+			imageUrl:
+				'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2022&q=80',
+		},
+	})
 
- await prisma.article.upsert({
-	where: { title: '' },
-	update: {},
-	create: {
-		title: "Como a energia nuclear pode nos ajudar",
-		body: `A energia nuclear é uma fonte de energia limpa e eficiente que tem o potencial de nos ajudar a enfrentar alguns dos desafios mais urgentes do mundo, como a mudança climática e a pobreza.
+	await prisma.article.upsert({
+		where: { title: '' },
+		update: {},
+		create: {
+			title: 'Como a energia nuclear pode nos ajudar',
+			body: `A energia nuclear é uma fonte de energia limpa e eficiente que tem o potencial de nos ajudar a enfrentar alguns dos desafios mais urgentes do mundo, como a mudança climática e a pobreza.
 	
 		Vantagens da energia nuclear
 		
@@ -260,23 +265,22 @@ async function main() {
 		**Desenvolver tecnologias para o tratamento e o armazenamento de resíduos nucleares.
 		Desenvolver um plano para a transição para fontes de energia renováveis, como a energia solar e eólica.
 		A energia nuclear pode ser uma parte importante da solução para os desafios do mundo moderno. Com o investimento adequado em segurança e tecnologia, a energia nuclear pode nos ajudar a construir um futuro mais sustentável e justo para todos.`,
-		description:
-		  'A energia nuclear é uma fonte de energia limpa e eficiente que tem o potencial de nos ajudar a enfrentar alguns dos desafios mais urgentes do mundo, como a mudança climática e a pobreza.',
-		published: true,
-		imageUrl: 'https://images.unsplash.com/photo-1591200834528-4050ce99fe78?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
-	 },
- });
+			description:
+				'A energia nuclear é uma fonte de energia limpa e eficiente que tem o potencial de nos ajudar a enfrentar alguns dos desafios mais urgentes do mundo, como a mudança climática e a pobreza.',
+			published: true,
+			imageUrl:
+				'https://images.unsplash.com/photo-1591200834528-4050ce99fe78?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+		},
+	})
 
-
-  console.log('Informações gravadas com sucesso!');
+	console.log('Informações gravadas com sucesso!')
 }
 
 main()
-  .catch((e) => {
-    console.error(e);
-    process.exit(1);
-  })
-  .finally(async () => {
-    await prisma.$disconnect();
-  });
- 
+	.catch((e) => {
+		console.error(e)
+		process.exit(1)
+	})
+	.finally(async () => {
+		await prisma.$disconnect()
+	})

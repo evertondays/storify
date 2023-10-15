@@ -7,7 +7,9 @@ export default async function HomeCard(props: AppProps) {
 		<div className={styles.card}>
 			<img src={props.post?.imageUrl ? props.post?.imageUrl : ''}></img>
 			<div className={styles.info}>
-				<Link href="/" className={styles.title} >{props.post.title}</Link>
+				<Link href="/" className={styles.title}>
+					{props.post.title}
+				</Link>
 				<div className={styles.card_text}>{props.post.description}</div>
 			</div>
 		</div>
@@ -16,4 +18,4 @@ export default async function HomeCard(props: AppProps) {
 
 declare interface AppProps {
 	post: Article
- }
+}
