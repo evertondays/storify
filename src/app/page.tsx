@@ -2,6 +2,7 @@ import { PrismaClient } from '@prisma/client'
 import Link from 'next/link'
 import styles from './page.module.css'
 import HomeCard from '../components/home-card.component'
+import Image from 'next/image'
 
 export default async function Home() {
 	const prisma = new PrismaClient()
@@ -17,16 +18,14 @@ export default async function Home() {
 	return (
 		<div>
 			<header className={styles.header}>
-				<img
-					src={firstArticle?.imageUrl ? firstArticle?.imageUrl : ''}
-				></img>
+				<img src={firstArticle?.imageUrl ? firstArticle?.imageUrl : ''}></img>
 
 				<div className={styles.text_wrapper}>
 					<div className={styles.info_container}>
 						<div className={styles.info_card}>
 							<span>Mais recente</span>
 						</div>
-						<Link href="/" className={styles.link}>
+						<Link href={`/article/${firstArticle?.id}`} className={styles.link}>
 							{firstArticle?.title}
 						</Link>
 					</div>
