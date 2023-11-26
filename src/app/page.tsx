@@ -1,8 +1,11 @@
+import React from 'react'
 import { PrismaClient } from '@prisma/client'
 import Link from 'next/link'
 import styles from './page.module.css'
 import HomeCard from '../components/home-card.component'
-import Image from 'next/image'
+import { IBM_Plex_Sans } from 'next/font/google'
+
+const IbmPlexFont = IBM_Plex_Sans({ weight: ['700'], subsets: ['latin'] })
 
 export default async function Home() {
 	const prisma = new PrismaClient()
@@ -19,14 +22,13 @@ export default async function Home() {
 		<div>
 			<header className={styles.header}>
 				<img src={firstArticle?.imageUrl ? firstArticle?.imageUrl : ''}></img>
-
 				<div className={styles.text_wrapper}>
 					<div className={styles.info_container}>
 						<div className={styles.info_card}>
 							<span>Mais recente</span>
 						</div>
 						<Link href={`/article/${firstArticle?.id}`} className={styles.link}>
-							{firstArticle?.title}
+							<span className={IbmPlexFont.className}>{firstArticle?.title}</span>
 						</Link>
 					</div>
 				</div>
